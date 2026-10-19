@@ -1,0 +1,186 @@
+header{
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    box-shadow: 2px 2px 1px white;
+}
+
+header a{
+    text-decoration: none;
+    color: inherit;
+    
+}
+ header span{
+    color: white;
+    font-size: 25px;
+ }
+
+header nav a{
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    font-family: Poppins, sans-serif;
+ }
+
+ header nav a:hover{
+    color: white;
+
+ }
+
+#homepage .divleft,
+#homepage .divright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#homepage .divleft img {
+    width: min(100%, 430px);
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+#homepage .divright h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+}
+
+#aboutme h2{
+      font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+}
+
+#aboutme p{
+    font-size: 20px;
+    padding: 50px;
+}
+
+#contacts{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}
+
+html body {
+    scroll-behavior: smooth;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+ --glow-color: rgb(247, 247, 247);
+ --glow-spread-color: rgba(12, 12, 12, 0.781);
+ --enhanced-glow-color: rgb(231, 206, 255);
+ --btn-color: rgb(0, 0, 0);
+ border: .25em solid var(--glow-color);
+ padding: 1em 3em;
+ color: var(--glow-color);
+ font-size: 15px;
+ font-weight: bold;
+ background-color: var(--btn-color);
+ border-radius: 1em;
+ outline: none;
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+ text-shadow: 0 0 .5em var(--glow-color);
+ position: relative;
+ transition: all 0.3s;
+}
+
+button::after {
+ pointer-events: none;
+ content: "";
+ position: absolute;
+ top: 120%;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: var(--glow-spread-color);
+ filter: blur(2em);
+ opacity: .7;
+ transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+ color: var(--btn-color);
+ background-color: var(--glow-color);
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+ box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+body{
+    --bg-clr: white;
+        --bg-one: url(assests/images/theme-1.jpg);
+        flex-wrap: wrap;
+        background-image: var(--bg-one);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: 3s ease;
+        color: #fff;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        gap: 16px;
+        padding-top: 50px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    header nav a {
+        font-size: 20px;
+    }
+
+    header > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header button {
+        padding: 0.75em 1em;
+        font-size: 13px;
+    }
+
+    #aboutme p {
+        padding: 24px;
+    }
+
+    #contacts {
+        font-size: 24px;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}
